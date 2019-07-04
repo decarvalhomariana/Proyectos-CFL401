@@ -108,7 +108,7 @@ public class DeCarvalhoTestArrayList {
     while(it.hasNext()){
         Mascotas mascota = (Mascotas) it.next();//creamos una variable provisoria para que guarde los datos de la clase
         //System.out.println(((Mascotas) it.next()).getNombre());
-        System.out.println("El nombre de su mascota es "+ mascota.getNombre() + " la edad " + mascota.getEdad() + " y la cantidad de patas que tiene son "+ mascota.getPatas()+ ".");
+        System.out.println("El nombre de su mascota es "+ mascota.getNombre()+ " la edad " + mascota.getEdad() + " y la cantidad de patas que tiene son "+ mascota.getPatas()+ ".");
     }
     
    

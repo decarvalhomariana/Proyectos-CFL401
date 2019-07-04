@@ -24,6 +24,12 @@ public class Mascotas {
         this.patas = patas;
     }
 
+    /**
+     *
+     * El metodo getNombre es para conseguir el nombre del objeto.  
+     * @return retorna el nombre
+     * @param nombre 
+     */
     public String getNombre() {
         return nombre;
     }
