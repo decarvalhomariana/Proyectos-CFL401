@@ -15,6 +15,14 @@ public class Mascotas {
     public String nombre;
     public int edad;
     public int patas;
+    
+    
+    //Constructor 
+    public Mascotas(String nombre, int edad, int patas) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.patas = patas;
+    }
 
     public String getNombre() {
         return nombre;
