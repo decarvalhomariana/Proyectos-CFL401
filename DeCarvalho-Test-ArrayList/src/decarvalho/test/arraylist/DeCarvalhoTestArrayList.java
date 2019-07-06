@@ -18,9 +18,9 @@ public class DeCarvalhoTestArrayList {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) {/*
         
-    /*Scanner entrada = new Scanner(System.in);
+    Scanner entrada = new Scanner(System.in);
     ArrayList elem = new ArrayList();
     int numero;
     boolean bandera = true;
@@ -57,8 +57,7 @@ public class DeCarvalhoTestArrayList {
         numero = entrada.nextInt();
     }
     System.out.println(elem2);
-    */
-
+    
     ArrayList <Mascotas> animales = new ArrayList();
     Mascotas perro1 = new Mascotas("Tory", 22, 4);
     animales.add(perro1);
@@ -88,6 +87,7 @@ public class DeCarvalhoTestArrayList {
     
     animales.add(new Mascotas(nombre, edad, patas));
     entrada.nextLine();//Se puso solo porque hay un error en el buffer.
+    //Conviene usar el nextLine y agregar adelante el valueOf o el parseInt.
     System.out.print("Ingrese el nombre de la mascota y si quiere salir escriba la palabra Salir: ");
     nombre = entrada.nextLine();
     
@@ -110,8 +110,26 @@ public class DeCarvalhoTestArrayList {
         //System.out.println(((Mascotas) it.next()).getNombre());
         System.out.println("El nombre de su mascota es "+ mascota.getNombre()+ " la edad " + mascota.getEdad() + " y la cantidad de patas que tiene son "+ mascota.getPatas()+ ".");
     }
+    */
+    //Creacion de objetos.
+    Persona per1 = new Persona("José Luís", 45);
+    Persona per2 = new Persona ("Marta", 53);
     
-   
+    Mascotas perro = new Mascotas ("Boby", 7, 4);
+    Mascotas gato = new Mascotas ("Sultán", 2, 4);
+    Mascotas loro = new Mascotas ("Pepe", 10, 2);
+    
+    per1.agregarMascota(perro);
+    per2.agregarMascota(gato);
+    per1.agregarMascota(loro);
+    
+    //Forma resumida.
+    gato.setEdad(gato.getEdad()+1);
+    //Forma extendida.
+    //int edad = gato.getEdad();
+    //edad++; //edad = edad+1; //edad+=1;
+    //gato.setEdad(edad);
+    System.out.println("El gato " + gato.getNombre()+ " cumplió " + gato.getEdad() + " años.");
     
     
     
@@ -120,3 +138,10 @@ public class DeCarvalhoTestArrayList {
     }
     
 }
+
+
+
+
+
+
+
