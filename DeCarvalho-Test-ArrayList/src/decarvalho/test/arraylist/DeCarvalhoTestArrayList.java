@@ -131,7 +131,8 @@ public class DeCarvalhoTestArrayList {
     //gato.setEdad(edad);
     System.out.println("El gato " + gato.getNombre()+ " cumplió " + gato.getEdad() + " años.");
     
-    
+    System.out.println(per2.cuantasMascotasTenes());
+    System.out.println(per1.cuantasMascotasTenes());
     
     
     

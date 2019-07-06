@@ -47,8 +47,8 @@ public class Persona {
     }
        
     public int cuantasMascotasTenes (){
+        return mascotas.size();
         
-        return
     }
 
     }
