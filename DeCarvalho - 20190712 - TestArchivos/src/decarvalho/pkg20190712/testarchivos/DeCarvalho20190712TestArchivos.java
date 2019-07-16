@@ -10,6 +10,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashSet;
 
 /**
  *
@@ -17,18 +18,22 @@ import java.io.PrintWriter;
  */
 public class DeCarvalho20190712TestArchivos {
 
+private static VentanaLogin ventanaLogin; //se crean las variables de las ventanas fueras del main para poder usar las mismas variables en todos los metodos que yo cree.
+private static Ventana ventana;
+    
     /**
      * @param args the command line arguments
      * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException {
-        // TODO code application logic here
+               
         
+    /*
     //FileWriter, es la clase que me permite comunicarme con un ARCHIVO
     //FileWriter file(nombre variable) = new FileWriter(ruta al archivo, si se sobre escrive o no)
     
     FileWriter file = new FileWriter ("texto.txt", false); //el false hace que se sobre escriba, el true hace que se sigan creando archivos. Si no esta el archivo lo genera.
-    PrintWriter escritor = new PrintWriter (file);//Manejador. Maneja las interaccionas. poniendo el punto se accede a las acciones que se pueden hacer.
+    PrintWriter escritor = new PrintWriter (file);//Manejador. Maneja las interaccionas. poniendo el punto se accede a las acciones que se pueden hacer en el archivo.
     escritor.println("¿Cómo estás?");
     escritor.print("Edad: ");
     //escritor.print(JOptionPane.showInputDialog(null, "Escribi algo"));//lo que escriba el usuario queda guardado en el archivo.
@@ -88,13 +93,57 @@ public class DeCarvalho20190712TestArchivos {
      */
     
     //alt+shift+f acomoda el codigo.
-    }
-    
+    /* 
     Ventana ventana = new Ventana();
     ventana.setVisible(true);
     
+    VentanaLogin VenLog = new VentanaLogin();
+    venLog.setVisible(true);
+   
+    
+    Testeo test = new Testeo ();
+    
+    test.setApellido("Firu");
+    
+    Testeo test2 = new Testeo();
+    
+    test2.setApellido("LG");
+    
+    System.out.println(test.getApellido());
+    System.out.println(test2.getApellido());
+    
+    test.setApellido("Firu");
+    System.out.println(test.getApellido());
+    System.out.println(test2.getApellido());
+     
+    
+    Testeo.setApellido("Loco");
+    System.out.println(Testeo.getApellido());
+*/   
+    
+    mostrarLogin();
+    
+    }
+    
+    /**
+     * El método mostrasLogin es para mostrar la ventana con el Login del usurio.
+     */
+    public static void mostrarLogin(){
+        ventanaLogin = new VentanaLogin();
+        ventanaLogin.setVisible(true);   
+    }
+   
+    public static void mostrarVentanaPrincipal(){
+        ventanaLogin.setVisible(false);
+        ventana = new Ventana();
+        ventana.setVisible(true);
+        
+        
+        
+    }
+    
     
     
     }
     
-}
+
