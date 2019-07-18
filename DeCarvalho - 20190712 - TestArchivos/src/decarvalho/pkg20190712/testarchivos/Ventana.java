@@ -5,6 +5,8 @@
  */
 package decarvalho.pkg20190712.testarchivos;
 
+import java.awt.Color;
+
 /**
  *
  * @author Programación
@@ -146,13 +148,41 @@ public class Ventana extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Chequeamos que sólo se ingresen números.
     private void edadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_edadKeyTyped
-        if (evt.getKeyChar() >= 48 && evt.getKeyChar() <= 57){//alternativo if(evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9'
+        //con el .getText se obtiene el texto que se escribe en la variable edad(que es el campo) y además le pedimos la longitud y le decimos que tiene que poder ingresar solo 3 numeros
+        //Se pueden poner varios métodos juntos.
+        //Otra solición para dejar que se escriban solo 3 numeros seria :
+        
+        //String texto = edad.getText();
+        //if (texto.lenght()<=3){
+        //TODO EL IF QUE ESTA ABAJO
+        //}else{evt.consume();}
+        
+        //Se puede generar un METODO para no hacer el choclo de abajo y si el if de arriba 
+        //if(texto.lenght()<=3){
+        //if(puedoEscribirLaLetra(evt)){
+        //System.out.println(evt.getKeyChar());
+        //}else {evt.consume();}
+
+        //false && -- si es falso no le importa la segunda condicion porque la primera ya es falsa
+        //true && true -- si el primero es un true va a verificar igual la segunda doncidion para que sea tmb verdadera y ahi entra
+        //con el o || ocurre al revez, si hay un falso, va a seguir corrobando hasta encontrar un true
+        //si hay un solo true no va a corroborar mas la segunda condicion porque ya con uno entra.
+     
+        if (evt.getKeyChar() >= 48 
+                && evt.getKeyChar() <= 57 
+                && edad.getText().length()<3 
+                && (edad.getText().length() == 0 || (Integer.parseInt(edad.getText()+ evt.getKeyChar()) <= 150))){//alternativo if(evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9'  
+        edad.setBackground(Color.white);//cuando pones bien los numeros se pone en verde.
         System.out.println(evt.getKeyChar());
         }else{
-            evt.consume();//Consume la información que no entra en la condición(no la escribe, no aparece)
+            edad.setBackground(Color.red);//hacemos que se ponga en rojo el casillero
+            evt.consume();//Consume la información que no entra en la condición(no la escribe, no aparece)            
         }
+         
+        
+        
     }//GEN-LAST:event_edadKeyTyped
 
     

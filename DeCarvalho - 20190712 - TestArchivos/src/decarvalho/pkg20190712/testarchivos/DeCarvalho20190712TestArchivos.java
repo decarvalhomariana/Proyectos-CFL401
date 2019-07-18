@@ -138,6 +138,8 @@ private static Ventana ventana;
         ventana = new Ventana();
         ventana.setVisible(true);
         
+    
+        
         
         
     }

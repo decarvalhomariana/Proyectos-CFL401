@@ -11,7 +11,7 @@ package decarvalho.pkg20190712.testarchivos;
  */
 public class Testeo {
     
-    private static String apellido;//El tatic comparte la información con todos los objetos creados de la clase.
+    private static String apellido;//El static comparte la información con todos los objetos creados de la clase.
     private String edad;
 
     public static void setApellido (String a){   
